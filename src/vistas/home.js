@@ -1,5 +1,6 @@
 export default () => {
     const viewHome = `
+    <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
             
     <img class="logo" src="imgs/alicorp_web.png">
@@ -47,13 +48,16 @@ export default () => {
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
+    <div class="linkNext">
+    <a href="#/mesero" class="btnMesero"><span class="spanMesero">¿ERES OPERARIO?</span></a>
+    <a href="#" class="btnCocinero"><span class="spanCocinero">mm</span></a>
+    </div>
   </nav>
+  </header>
   <body>
   <video class="video-banner" src="video/httpswww.alicorp.com.pemediaMP4alicorp_manifesto_ONLINE_RE_e.mp4"  autoplay muted loop  ></video>
-  <div class="linkNext">
-            <a href="#/mesero" class="btnMesero"><span class="spanMesero">catalogo</span></a>
-            <a href="#" class="btnCocinero"><span class="spanCocinero">mm</span></a>
-            </div>
+ 
+
   </body>
   <footer>
   
