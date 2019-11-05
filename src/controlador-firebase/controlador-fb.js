@@ -23,3 +23,13 @@ export const productos = (tipo, call) => {
       //    console.log("Error getting documents: ", error);
       // });
 }
+
+export const colaborador = (callback) => {
+   return firebase.firestore().collection('colaborador').get().then((querySnapshot) => {
+      const array = [];
+      querySnapshot.forEach((doc) => {
+         array.push({ id: doc.id, ...doc.data() })
+      });
+      callback(array)
+   })
+};
