@@ -50,6 +50,10 @@ footer{
     width: 30%;
     height: 20%;
 }
+.img-login{
+    width: 50%;
+    height: 50%;
+}
 
 .last-footer{
     background-color: beige;
