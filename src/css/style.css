@@ -36,15 +36,46 @@ footer{
 .buscador{
     display:flex;
     justify-content: space-between;
+    padding: 20px;
 }
 .log{
-    width: 15%;
+    /* width: 15%; */
+    width: 150px;
+}
+.flex1 { flex: 1 1 5em; }
+.flex2 { 
+    flex: 2 2 30em;
+    justify-content: center;
+}
+.btn-search {
+    cursor: pointer;
+    position: absolute;
+    right: 17%;
+    color: #a0a2a2;
+    font-size: 22px;
+    color: #6d777a;
+
 }
 .card{
     width: 30%;
     height: 20%;
 }
-
+.form-input {
+   
+    width: 70%;
+    border-radius: 20px;
+    background: #eeeeee;
+    border-style: none;
+    padding: 10px;
+}
+.link {
+    color: #ffffff;
+    font-size: 20px;
+}
+.nav-collapse {
+    display: flex;
+    justify-content: space-around;
+}
 .last-footer{
     background-color: beige;
     color: black;
