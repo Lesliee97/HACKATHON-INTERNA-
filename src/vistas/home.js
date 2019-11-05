@@ -3,7 +3,7 @@ export default () => {
     <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
             
-    <img class="logo" src="imgs/alicorp_web.png">
+    <img class="logo" src="../imgs/alicorp_web.png">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -55,12 +55,95 @@ export default () => {
   </nav>
   </header>
   <body>
-  <video class="video-banner" src="video/httpswww.alicorp.com.pemediaMP4alicorp_manifesto_ONLINE_RE_e.mp4"  autoplay muted loop  ></video>
+  <video class="video-banner" src="../video/httpswww.alicorp.com.pemediaMP4alicorp_manifesto_ONLINE_RE_e.mp4" autoplay muted loop  ></video>
  
 
   </body>
   <footer>
+  <div class="container  ">
+      <div class="row">
+        <div class="col-md-3 col-sm-12 mb-3 text-center">
+            <div class="ali">
+                <img class="logo-alicorp" src="../imgs/alicorp.png">
+              </div>
+        </div>
+        <div class="col-md-9 col-sm-12">
   
+          <div class="col-md-3 col-sm-6 col-6 p-0 float-left mb-3">
+            <h5 class="mb-4 font-weight-bold text-uppercase">Acerca de Alicorp</h5>
+          <ul class="list-group">
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2">Nosotro</li>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2">Dónde estamos</li>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2">Oportunidades Alicorp</li>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2">Inversionistas</li>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2">Clientes y proveedores</li>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2">Promociones</li>
+          </ul>
+          </div>
+  
+          <div class="col-md-3 col-sm-6 col-6 p-0 mb-3 float-left">
+            <h5 class="mb-4 font-weight-bold text-uppercase">Productos y soluciones</h5>
+          <ul class="list-group">
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2">Acuicultura </li>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2">B2B</li>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2">Consumo masivo</li>
+          </ul>
+          </div>
+  
+          <div class="col-md-3 col-sm-6 col-6 mb-3 p-0 float-left">
+            <h5 class="mb-4 font-weight-bold text-uppercase">Sostenibilidad</h5>
+          <ul class="list-group">
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2">Bienestar</li>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2"> Cuidado del ambiente</li>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2">Desarrollo de la cadena de valor</li>
+          </ul>
+          </div>
+  
+          <div class="col-md-3 col-sm-6 col-6 mb-3 p-0 float-left">
+            <h5 class="mb-4 font-weight-bold text-uppercase">Central telefónica</h5>
+          <ul class="list-group">
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                De Lunes a Sábado, </br> 9:00 am a 7:00 pm
+            </li>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                <p><strong><span>Lima</span>+511 315 0800</strong></p>    
+            </li class="list-group-item bg-transparent border-0 p-0 mb-2">
+            <h5 class="mb-4 font-weight-bold text-uppercase">Servicio al cliente</h5>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                De Lunes a Sábado, </br> 9:00 am a 7:00 pm
+            </li>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+                <p><strong><span>Lima</span>+511 708 9300</strong></p>
+            </li>
+          </ul>
+          </div>
+  
+        </div>
+           <div class="col-md-12">
+            <div class="py-4 d-flex justify-content-center align-items-center">
+                <h6 class="mb-0">©Alicorp. Todos lo derechos reservados 2019 | Políticas de privacidad | Términos y
+                    condiciones</h6>
+            </div>
+            <div id="contacto" class="col-md-6 col-lg-7 text-center text-md-right">
+                <!--Linkedin -->
+                <a class="li-ic">
+                  <i class="fa fa-linkedin dark-text mr-4"> </i>
+                </a>
+                <!-- Facebook -->
+                <a class="fb-ic">
+                  <i class="fa fa-facebook-f red-text mr-4"> </i>
+                </a>
+                <!-- Twitter -->
+                <a class="tw-ic">
+                  <i class="fa fa-twitter dark-text mr-4"> </i>
+                </a>
+              </div>
+          </div> 
+      </div>
+    </div>
+    <!-- <div class="last-footer">
+    </div>
+  </footer>
   </footer> 
     `;
 
