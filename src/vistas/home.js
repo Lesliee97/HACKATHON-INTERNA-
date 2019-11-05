@@ -3,7 +3,7 @@ export default () => {
     <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-white font-weight-bold">
     <div class="linkNext">
-    <a href="#/mesero" class="btn-ingresar"><span class="spanMesero">SI ERES OPERARIO INGRESA AQUI</span></a>
+    <a href="#/login" class="btn-ingresar"><span class="spanMesero">SI ERES OPERARIO INGRESA AQUI</span></a>
     <a href="#" class="btnCocinero"><span class="spanCocinero"></span></a>
     </div>       
     <img class="logo" src="../imgs/Copy-of-logo_Alta.jpg">

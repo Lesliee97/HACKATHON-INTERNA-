@@ -2,28 +2,43 @@
 export default () => {
     const login = `
     
-<section class="login-block">
-<div class="container">
-  <div class="row">
-    <div class="col-md-4 login-sec">
-      <img class="log" src="../imgs/alicorp_web.jpg">
-      <form class="login-form">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Usuario">
+    <div class="container h-100">
+    <div class="d-flex justify-content-around mb-2">
+     <img class="alicorp-logo-login"src="../imgs/Copy-of-logo_Alta.jpg">
+			<div class="user_card">
+        <div class="d-flex justify-content-center">
+        <div class="bienvenida">
+          <h4>¡Bienvenido Colaborador!</h4>
+          <p>Ingresa aquí para hacer tus pedidos</p>
         </div>
-        <div class="form-group">
-          <input type="password" class="form-control" placeholder="Contraseña">
-        </div>
-        <div>
-         <a href="#/mesero" class="btnMesero"><span class="spanMesero">Ingresar</span></a>
-        </div>
-      </form>
-    </div>
-    <div>
-      <img class="img-login" src="../imgs/operarios.jpg">
-    </div>
-  </div>
-</section>
+          </div>
+				<div class="d-flex justify-content-center form_container">
+					<form>
+						<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fa fa-user"></i></span>
+							</div>
+							<input type="text" name="" class="form-control input_user" value="" placeholder="Usuario">
+						</div>
+						<div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fa fa-lock"></i></span>
+							</div>
+							<input type="password" name="" class="form-control input_pass" value="" placeholder="Contraseña">
+						</div>
+						<div class="form-group">
+						</div>
+							<div class="d-flex justify-content-center mt-3 login_container">
+				 	<button type="button" name="button" class="btn login_btn"><a href="#/mesero" class="btnMesero"><span class="spanMesero">Ingresar</a></button>
+				   </div>
+					</form>
+				</div>
+		
+				<div class="mt-4">
+				
+			</div>
+		</div>
+	</div>
 `;
     const divElem = document.createElement('div');
     divElem.innerHTML = login;
