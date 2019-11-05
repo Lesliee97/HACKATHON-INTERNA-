@@ -7,6 +7,9 @@ export const changeTmp = (hash) => {
         case '': 
         sectionMain.appendChild(components.home());
         break;
+        case '#/login': 
+        sectionMain.appendChild(components.login());
+        break;
         case '#/mesero': 
         sectionMain.appendChild(components.loginOperario());
         break;

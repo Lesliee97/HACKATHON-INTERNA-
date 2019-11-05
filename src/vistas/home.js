@@ -49,7 +49,7 @@ export default () => {
       </form>
     </div>
     <div class="linkNext">
-    <a href="#/mesero" class="btnMesero"><span class="spanMesero">¿ERES OPERARIO?</span></a>
+    <a href="#/login" class="btnMesero"><span class="spanMesero">¿ERES OPERARIO?</span></a>
     <a href="#" class="btnCocinero"><span class="spanCocinero">mm</span></a>
     </div>
   </nav>
