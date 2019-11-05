@@ -71,19 +71,19 @@ export default () => {
             })
             .catch(()=> console.log('error'));
     })
-    const almuerzo = divElement.querySelector('#btnAlmuerzo');
-    almuerzo.addEventListener('click', () => {
-        const box = document.getElementById('containerCentral');
-        box.innerHTML = '';
-        verDataFb('Menú')
-            .then((snapshot) => {
-                snapshot.docs.forEach(doc => {
-                    box.appendChild(templates(doc));
+    // const almuerzo = divElement.querySelector('#btnAlmuerzo');
+    // almuerzo.addEventListener('click', () => {
+    //     const box = document.getElementById('containerCentral');
+    //     box.innerHTML = '';
+    //     verDataFb('Menú')
+    //         .then((snapshot) => {
+    //             snapshot.docs.forEach(doc => {
+    //                 box.appendChild(templates(doc));
                     
-                }); 
-            })
-            .catch(()=> console.log('error'));
-    })
+    //             }); 
+    //         })
+    //         .catch(()=> console.log('error'));
+    // })
 
     
     return divElement;
