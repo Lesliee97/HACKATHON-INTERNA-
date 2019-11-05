@@ -12,12 +12,9 @@ export const templates = (doc) => {
     const btnBoton = document.createElement('button');
     btnBoton.className = 'btnProducto';
     btnBoton.setAttribute('data-id', doc.id);
-
-    const temp = `<img class="fotoDesayuno" src="${doc.data().url}">
+    const temp = `<img class="card" src="${doc.data().url}">
     <p>${doc.data().producto}</p>
     <p>S/. ${doc.data().precio}</p>
-   
-    
     `;
     btnBoton.innerHTML = temp;
     // TEMPLATE SABORES AD.

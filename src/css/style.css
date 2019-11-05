@@ -8,6 +8,10 @@
     margin: 0%;
     padding: 0%;
 }
+.card{
+    width: 30%;
+    height: 20%;
+}
 .first-footer{
   background:#DD1B2F ;  
   color: beige;
@@ -17,3 +21,4 @@
 .content-footer{
     background:#DD1B2F ;
 }
+
