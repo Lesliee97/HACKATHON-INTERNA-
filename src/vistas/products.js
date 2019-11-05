@@ -1,7 +1,7 @@
 export default (obj) => {
     const viewProd = `
     <div>
-    <img src="${obj.url}">
+    <img  class ="card"src="${obj.url}">
             
      </div> 
     `;
