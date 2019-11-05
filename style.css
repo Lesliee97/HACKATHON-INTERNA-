@@ -1,6 +1,10 @@
+
+
 .logo{
     width: 150px;
     height: 80px;
+    margin-left: 100px;
+    display: block;
 }
 .video-banner{
     width: 100%;
@@ -8,12 +12,26 @@
     margin: 0%;
     padding: 0%;
 }
-.first-footer{
+footer{
   background:#DD1B2F ;  
   color: beige;
- 
+  margin: 0%;
 }
 
 .content-footer{
     background:#DD1B2F ;
+}
+#contacto{
+    color: #333;
+    
+}
+.logo-alicorp{
+   width: 200px;
+   height: 150px;
+   margin-left: 70px;
+}
+.last-footer{
+    background-color: beige;
+    color: black;
+    
 }
