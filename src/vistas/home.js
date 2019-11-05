@@ -1,9 +1,12 @@
 export default () => {
     const viewHome = `
     <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            
-    <img class="logo" src="../imgs/alicorp_web.png">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="linkNext">
+    <a href="#/mesero" class="btn-ingresar"><span class="spanMesero">SI ERES OPERARIO INGRESA AQUI</span></a>
+    <a href="#" class="btnCocinero"><span class="spanCocinero"></span></a>
+    </div>       
+    <img class="logo" src="../imgs/Copy-of-logo_Alta.jpg">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -44,14 +47,18 @@ export default () => {
        
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <div class="container h-100">
+      <div class="d-flex justify-content-center h-100">
+        <div class="searchbar">
+          <input class="search_input" type="text" name="" placeholder="Search...">
+          <a href="#" class="search_icon"><i class="fa fa-search"></i></a>
+        </div>
+      </div>
+    </div>
       </form>
     </div>
-    <div class="linkNext">
-    <a href="#/mesero" class="btnMesero"><span class="spanMesero">¿ERES OPERARIO?</span></a>
-    <a href="#" class="btnCocinero"><span class="spanCocinero">mm</span></a>
-    </div>
+   
+    
   </nav>
   </header>
   <body>
