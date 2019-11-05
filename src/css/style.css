@@ -33,6 +33,10 @@ footer{
    height: 150px;
    margin-left: 70px;
 }
+.card{
+    width: 30%;
+    height: 20%;
+}
 .last-footer{
     background-color: beige;
     color: black;
