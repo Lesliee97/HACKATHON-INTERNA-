@@ -1,6 +1,7 @@
 import { verDataFb } from "../controlador-firebase/controlador-fb.js";
 import { templates } from "../controlador-rutas/funciones.js";
 import { productos } from "../controlador-firebase/controlador-fb.js";
+import { components } from '../vistas/index.js';
 
 export default () => {
   const viewCatalogue = `
@@ -76,18 +77,14 @@ export default () => {
   })
 
 
-  // btnDetergentes.addEventListener('click', () => {
-  //   box.innerHTML = '';
-  //   productos("detergentes").docs.forEach(doc => {
-  //       box.appendChild(templates(doc));
-  //     });
-  //   })
-  //   // productos("detergentes").forEach(doc => {
-     
-  //   //   box.appendChild(templates(doc))
-
-  //   // });
-  // });
+  btnDetergentes.addEventListener('click', () => {
+    box.innerHTML = '';
+    productos("detergentes", (call) => {
+      call.forEach(doc => {
+        box.appendChild(components.products(doc));
+      });
+    })
+  });
 
 
   return divElement;
