@@ -1,32 +1,63 @@
 export default () => {
     const viewHome = `
-    <section id='suburbialDerecho'>
-        <div id="containerDerecho">
-         
-            <p class="containerParrafo"></p>
-            <div class="linkNext">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            
+    <img class="logo" src="imgs/alicorp_web.png">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Nosotros <span class="sr-only">(current)</span></a>
+        </li> 
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Producto y Soluciones
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Consumo</a>
+                <a class="dropdown-item" href="#">B2B</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Acuicultura</a>
+              </div>
+            </li>
+          <li class="nav-item">
+                <a class="nav-link" href="#">Sostenibilidad</a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link" href="#">Oportunidades Alicorp</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             Sala de Prensa
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="#">Action</a>
+                              <a class="dropdown-item" href="#">Another action</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                          </li>
+       
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <body>
+  <video class="video-banner" src="video/httpswww.alicorp.com.pemediaMP4alicorp_manifesto_ONLINE_RE_e.mp4"  autoplay muted loop  ></video>
+  <div class="linkNext">
             <a href="#/mesero" class="btnMesero"><span class="spanMesero">catalogo</span></a>
             <a href="#" class="btnCocinero"><span class="spanCocinero">mm</span></a>
             </div>
-        </div>
-    </section>
-    <section id="suburbialIzquierdo"> 
-        <div id="containerIzquierdo">
-            <div id="containerNothing"></div>
-            <div id="containerTitle"><h1 class="title">Delicious Food</h1></div>
-        </div>
-        <div id="containerSocial">
-            <div class="redesSociales">
-            <a class="linkFacebook" href="https://es-la.facebook.com/"><img src="img/facebook.png" class="logoFacebook" alt="Facebook" /></a>
-            <a class="linkTwitter" href="https://twitter.com/?lang=es"><img src="img/twitter.png" class="logoTwitter"
-                    alt="Twitter" /></a>
-            <a class="linkInstagram" href="https://www.instagram.com/"><img src="img/instagram.png" class="logoInstagram"
-                    alt="Instagram" /></a>
-            </div>
-        </div>
-        <div id="containerImagen">
-        </div>
-    </section>
+  </body>
+  <footer>
+  
+  </footer> 
     `;
 
     const divElement = document.createElement('section');
