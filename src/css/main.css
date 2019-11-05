@@ -336,3 +336,6 @@ button.btnProducto {
     width: 100px;
     height: 80px;
 }
+.navbar{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}

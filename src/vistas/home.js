@@ -1,7 +1,7 @@
 export default () => {
     const viewHome = `
     <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white font-weight-bold">
     <div class="linkNext">
     <a href="#/mesero" class="btn-ingresar"><span class="spanMesero">SI ERES OPERARIO INGRESA AQUI</span></a>
     <a href="#" class="btnCocinero"><span class="spanCocinero"></span></a>
@@ -47,24 +47,15 @@ export default () => {
        
       </ul>
       <form class="form-inline my-2 my-lg-0">
-      <div class="container h-100">
-      <div class="d-flex justify-content-center h-100">
-        <div class="searchbar">
-          <input class="search_input" type="text" name="" placeholder="Search...">
-          <a href="#" class="search_icon"><i class="fa fa-search"></i></a>
-        </div>
-      </div>
-    </div>
+      <img class="searcher" src="../imgs/search.svg">
       </form>
     </div>
    
     
   </nav>
   </header>
-  <body>
+  <body class="body-home">
   <video class="video-banner" src="../video/httpswww.alicorp.com.pemediaMP4alicorp_manifesto_ONLINE_RE_e.mp4" autoplay muted loop  ></video>
- 
-
   </body>
   <footer>
   <div class="container  ">
