@@ -4,7 +4,7 @@ let sumaTotal = 0
 export const btnDatos = (doc) => {
   const btnPintardato = document.createElement('tr');
   btnPintardato.innerHTML +=
-    `<td id="productos">${doc.producto}</td>
+    `<td id="productos" >${doc.producto}</td>
           <td id="precios">s/.${doc.precio}</td>
           <td><p class="colour">${doc.cantidad}</p></td> 
           <td><button class="btnEliminar" id="${doc.id}">X</button></td>`;

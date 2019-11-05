@@ -33,6 +33,18 @@ footer{
    height: 150px;
    margin-left: 70px;
 }
+.buscador{
+    display:flex;
+    justify-content: space-between;
+}
+.log{
+    width: 15%;
+}
+.card{
+    width: 30%;
+    height: 20%;
+}
+
 .last-footer{
     background-color: beige;
     color: black;
