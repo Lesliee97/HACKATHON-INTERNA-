@@ -54,8 +54,10 @@ export default () => {
     
   </nav>
   </header>
-  <body class="body-home">
+  <body ">
+  
   <video class="video-banner" src="../video/httpswww.alicorp.com.pemediaMP4alicorp_manifesto_ONLINE_RE_e.mp4" autoplay muted loop  ></video>
+
   </body>
   <footer>
   <div class="container  ">
@@ -65,60 +67,60 @@ export default () => {
                 <img class="logo-alicorp" src="../imgs/alicorp.png">
               </div>
         </div>
-        <div class="col-md-9 col-sm-12">
+        <div class="col-md-9 col-sm-12 ">
   
-          <div class="col-md-3 col-sm-6 col-6 p-0 float-left mb-3">
-            <h5 class="mb-4 font-weight-bold text-uppercase">Acerca de Alicorp</h5>
+          <div class="col-md-3 col-sm-6 col-6 p-0 float-left mb-3 text-white">
+            <h5 class="mb-4 font-weight-bold text-uppercase ">Acerca de Alicorp</h5>
           <ul class="list-group">
-            <li class="list-group-item bg-transparent border-0 p-0 mb-2">Nosotro</li>
-            <li class="list-group-item bg-transparent border-0 p-0 mb-2">Dónde estamos</li>
-            <li class="list-group-item bg-transparent border-0 p-0 mb-2">Oportunidades Alicorp</li>
-            <li class="list-group-item bg-transparent border-0 p-0 mb-2">Inversionistas</li>
-            <li class="list-group-item bg-transparent border-0 p-0 mb-2">Clientes y proveedores</li>
-            <li class="list-group-item bg-transparent border-0 p-0 mb-2">Promociones</li>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2 text-white">Nosotro</li>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2 text-white">Dónde estamos</li>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2 text-white">Oportunidades Alicorp</li>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2 text-white">Inversionistas</li>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2 text-white">Clientes y proveedores</li>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2 text-white">Promociones</li>
           </ul>
           </div>
   
-          <div class="col-md-3 col-sm-6 col-6 p-0 mb-3 float-left">
+          <div class="col-md-3 col-sm-6 col-6 p-0 mb-3 float-left text-white">
             <h5 class="mb-4 font-weight-bold text-uppercase">Productos y soluciones</h5>
           <ul class="list-group">
-            <li class="list-group-item bg-transparent border-0 p-0 mb-2">Acuicultura </li>
-            <li class="list-group-item bg-transparent border-0 p-0 mb-2">B2B</li>
-            <li class="list-group-item bg-transparent border-0 p-0 mb-2">Consumo masivo</li>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2 text-white">Acuicultura </li>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2 text-white">B2B</li>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2 text-white">Consumo masivo</li>
           </ul>
           </div>
   
-          <div class="col-md-3 col-sm-6 col-6 mb-3 p-0 float-left">
+          <div class="col-md-3 col-sm-6 col-6 mb-3 p-0 float-left text-white">
             <h5 class="mb-4 font-weight-bold text-uppercase">Sostenibilidad</h5>
           <ul class="list-group">
-            <li class="list-group-item bg-transparent border-0 p-0 mb-2">Bienestar</li>
-            <li class="list-group-item bg-transparent border-0 p-0 mb-2"> Cuidado del ambiente</li>
-            <li class="list-group-item bg-transparent border-0 p-0 mb-2">Desarrollo de la cadena de valor</li>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2 text-white">Bienestar</li>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2 text-white"> Cuidado del ambiente</li>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2 text-white">Desarrollo de la cadena de valor</li>
           </ul>
           </div>
   
-          <div class="col-md-3 col-sm-6 col-6 mb-3 p-0 float-left">
+          <div class="col-md-3 col-sm-6 col-6 mb-3 p-0 float-left text-white">
             <h5 class="mb-4 font-weight-bold text-uppercase">Central telefónica</h5>
           <ul class="list-group">
-            <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2 text-white">
                 De Lunes a Sábado, </br> 9:00 am a 7:00 pm
             </li>
-            <li class="list-group-item bg-transparent border-0 p-0 mb-2">
-                <p><strong><span>Lima</span>+511 315 0800</strong></p>    
-            </li class="list-group-item bg-transparent border-0 p-0 mb-2">
-            <h5 class="mb-4 font-weight-bold text-uppercase">Servicio al cliente</h5>
-            <li class="list-group-item bg-transparent border-0 p-0 mb-2">
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2 text-white">
+                <p><strong><span class="telf">Lima +511 315 0800</span></strong></p>    
+            </li class="list-group-item bg-transparent border-0 p-0 mb-2 text-white">
+            <h5 class="mb-4 font-weight-bold text-uppercase text-white" >Servicio al cliente</h5>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2 text-white">
                 De Lunes a Sábado, </br> 9:00 am a 7:00 pm
             </li>
-            <li class="list-group-item bg-transparent border-0 p-0 mb-2">
-                <p><strong><span>Lima</span>+511 708 9300</strong></p>
+            <li class="list-group-item bg-transparent border-0 p-0 mb-2 text-white">
+                <p ><strong><span class="telf">Lima +511 708 9300</span></strong></p>
             </li>
           </ul>
           </div>
   
         </div>
-           <div class="col-md-12">
-            <div class="py-4 d-flex justify-content-center align-items-center">
+           <div id = "last-footer" class="col-lg-12 ">
+            <div class="py-2 d-flex justify-content-center align-items-center ">
                 <h6 class="mb-0">©Alicorp. Todos lo derechos reservados 2019 | Políticas de privacidad | Términos y
                     condiciones</h6>
             </div>
@@ -139,9 +141,8 @@ export default () => {
           </div> 
       </div>
     </div>
-    <!-- <div class="last-footer">
-    </div>
-  </footer>
+  
+  
   </footer> 
     `;
 

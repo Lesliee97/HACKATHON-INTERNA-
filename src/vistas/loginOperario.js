@@ -16,44 +16,43 @@ export default () => {
 
         </form>
   </div>
-    <nav id="navbar-catalogo"class="navbar navbar-expand-lg  navbar-light bg-red >
-      <div class="collapse navbar-collapse" id="navbar10">
-        <ul class="navbar-nav nav-fill w-100">
-          <li id="btnConservas" class="nav-item " >
-            <a class="nav-link text-white ">Conservas<span class="sr-only">(current)</span></a>
-          </li>
-          <li id="btnAceites" class="nav-item">
-            <a class="nav-link text-white" >Aceites</a>
-          </li>
-          <li id="btnPastas" class="nav-item">
-            <a class="nav-link text-white">Pastas</a>
-          </li>
-          <li  id ="btnDetergentes" class="nav-item">
-            <a class="nav-link text-white" >Detergentes</a>
-          </li>
-          <li id="btnJabones" class="nav-item">
-            <a class="nav-link text-white " tabindex="-1" aria-disabled="true">Jabones</a>
-          </li>
-          <li  id ="btnshopping" class="nav-item">
-            <img id="btnCarrito" class="shopping-car" src="../imgs/shopping-cart.svg">
-          </li>
-        </ul>
-        <div class="infoMenuDerecha">
-        <img class="user" src="../imgs/man-user.svg" alt="Usuario Perfil"/>
-        <p id="name"></p>
-      </div>
-       
-      </div>
-    </nav>
-  </header>
-  <div>
+  <nav id="navbar-catalogo" class="navbar navbar-expand-lg navbar-light btn-danger">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-  <div class="progress">
-  <div id="bar" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
-    <span class="sr-only">0% Complete</span>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav nav-fill w-100 mr-auto mt-2 mt-lg-0">
+      <li id="btnConservas" class="nav-item active">
+        <a class="nav-link text-white">Conservas<span class="sr-only">(current)</span></a>
+      </li>
+      <li id="btnAceites" class="nav-item">
+        <a class="nav-link text-white">Aceites</a>
+      </li>
+      <li id="btnPastas" class="nav-item">
+        <a class="nav-link text-white">Pastas</a>
+      </li>
+      <li  id ="btnDetergentes" class="nav-item">
+        <a class="nav-link text-white ">Detergentes</a>
+      </li>
+      <li id="btnJabones" class="nav-item">
+        <a class="nav-link text-white" tabindex="-1" aria-disabled="true">Jabones</a>
+      </li>
+      <li  id ="btnshopping" class="nav-item">
+        <img id="btnCarrito" class="shopping-car" src="../imgs/shopping-cart.svg">
+      </li>
+    </ul>
+    <div class="infoMenuDerecha">
+    <img class="user" src="../imgs/man-user.svg" alt="Usuario Perfil"/>
+    <p id="name"></p>
   </div>
-
-</div>
+    </ul>
+    
+  </div>
+</nav>
+  </header>
+  
     <div>
       <input type="text" id="inputTexto" placeholder="Nombre cliente">
       <button id="btnOk">→</button>

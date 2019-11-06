@@ -3,12 +3,14 @@ export default (obj) => {
   <img  class ="card"src="${obj.url}">
   <p class="name-prod">${obj.producto}</p>
   <p class="marca">${obj.marca}</p>
-  <p><span>Precio Venta </span>S/.${obj.compra}</p>
-  <p><span>Precio Sugerido </span>S/.${obj.precio}</p>
-  <div>
-  <button id= "resta" type="button" class="btn-add">-</button>
-  <span id="cant"> 1 </span>
-  <button id ="suma" type="button" class="btn-add">+</button>
+  
+  <p class="parent-btn-add"><span id="pcompra">Precio Venta </span><span id="precio-compra">S/.${obj.compra}</span></p>
+  <p class="parent-btn-sugerido"><span id="psugerido">Precio Sugerido </span>S/.${obj.precio}</p>
+ 
+  <div class="botones-agregar">
+  <button id= "resta" type="button" class="btn-sum">-</button>
+  <p id="cant"> 1 </p>
+  <button id ="suma" type="button" class="btn-sum">+</button>
   </div>
   <button  id="agregar"type="button" class="btn-add">Agregar</button>
 `;
