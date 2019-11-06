@@ -6,6 +6,16 @@
 .body-home{
 background-color: #E62F2E;
 }
+#navbar-catalogo{
+    background-color: #E62F2E;
+    
+}
+.shopping-car{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: 5px;
+}
 .logo{
     width: 180px;
     height: 60px;
