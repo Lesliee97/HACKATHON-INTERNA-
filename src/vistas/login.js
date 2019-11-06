@@ -49,7 +49,6 @@ export default () => {
     colaborador(callback => {
       let respuesta = "";
       callback.forEach(doc => {
-
         if (usuario === doc.id) {
           respuesta = true;
           // console.log("ven");
