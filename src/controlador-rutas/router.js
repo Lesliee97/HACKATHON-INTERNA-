@@ -1,4 +1,5 @@
 import { components } from '../vistas/index.js';
+// import { readPosts } from '../controlador-firebase/controlador-fb'
 
 export const changeTmp = (hash) => {
     const sectionMain = document.getElementById('container');
@@ -11,7 +12,12 @@ export const changeTmp = (hash) => {
         sectionMain.appendChild(components.login());
         break;
         case '#/mesero': 
+        // readPosts((call) => {
+            // sectionMain.innerHTML = '';
         sectionMain.appendChild(components.loginOperario());
+            // root.appendChild(viewHome(call));
+        //   });
+        
         break;
         case '#/cocinero': 
         sectionMain.appendChild(components.catalogo());
