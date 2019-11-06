@@ -50,7 +50,7 @@ export default () => {
       <button id="btnOk">→</button>
     </div>
     <button id="btnAlmuerzo">mmm</button>
-    <div id="containerCentral" class ="card"></div>
+    <div id="containerCentral" class ="cardProd"></div>
     <h2 id="cliente">Cliente : </h2>
     <div>
    `;

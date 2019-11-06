@@ -1,16 +1,16 @@
 export default (obj) => {
     const viewProd = `
-    <div>
+    
       <img  class ="card"src="${obj.url}">
-      <p>${obj.producto}</p>
-      <p>${obj.marca}</p>
-      <p><span>Precio Venta </span>${obj.compra}</p>
-      <p><span>Precio Sugerido </span>${obj.precio}</p>
-      <button type="button">Agregar</button>
-     </div> 
+      <p class="name-prod">${obj.producto}</p>
+      <p class="marca">${obj.marca}</p>
+      <p><span>Precio Venta </span>S/.${obj.compra}</p>
+      <p><span>Precio Sugerido </span>S/.${obj.precio}</p>
+      <button type="button" class="btn-add">Agregar</button>
+   
     `;
     const divElement = document.createElement('section');
-    // divElement.className = "body";
+    divElement.className = "prod";
     divElement.innerHTML = viewProd;
 
     return divElement;
