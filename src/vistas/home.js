@@ -1,9 +1,12 @@
 export default () => {
     const viewHome = `
     <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            
-    <img class="logo" src="../imgs/alicorp_web.png">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white font-weight-bold">
+    <div class="linkNext">
+    <a href="#/login" class="btn-ingresar"><span class="spanMesero">SI ERES OPERARIO INGRESA AQUI</span></a>
+    <a href="#" class="btnCocinero"><span class="spanCocinero"></span></a>
+    </div>       
+    <img class="logo" src="../imgs/Copy-of-logo_Alta.jpg">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -44,20 +47,15 @@ export default () => {
        
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <img class="searcher" src="../imgs/search.svg">
       </form>
     </div>
-    <div class="linkNext">
-    <a href="#/mesero" class="btnMesero"><span class="spanMesero">¿ERES OPERARIO?</span></a>
-    <a href="#" class="btnCocinero"><span class="spanCocinero">mm</span></a>
-    </div>
+   
+    
   </nav>
   </header>
-  <body>
+  <body class="body-home">
   <video class="video-banner" src="../video/httpswww.alicorp.com.pemediaMP4alicorp_manifesto_ONLINE_RE_e.mp4" autoplay muted loop  ></video>
- 
-
   </body>
   <footer>
   <div class="container  ">

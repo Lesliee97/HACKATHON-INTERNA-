@@ -2,11 +2,37 @@ import {
     btnDatos,
     btnTotal
 } from "../controlador-rutas/tabla.js";
+
+import {colaborador} from '../controlador-firebase/controlador-fb.js';
 let arr = [];
 let obj = {
     sabor: null,
     adicional: []
 };
+
+export const changeRoute =(route)=>{
+    window.location.hash=route;
+}
+export const rutaCatalogo= ()=>{
+    event.preventDefault();
+    const usuario = document.getElementById('usuario').value;
+    const password = document.getElementById('password').value;
+    colaborador(callback=>{
+      const respuesta= "";
+      callback.forEach(doc=>{
+        if(usuario===doc.id){
+          respuesta.textContent="ven";
+          // console.log("ven");
+        }else{
+          respuesta.textContent="nooooooo";
+          // console.log("no");
+        }
+        // console.log(doc)})
+    });
+    console.log(respuesta);
+});
+}
+
 
 export const templates = (doc) => {
     const btnBoton = document.createElement('button');

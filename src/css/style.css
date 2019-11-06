@@ -2,36 +2,37 @@
     padding: 0%;
     margin: 0%;
 }
-
+.body-home{
+background-color: #E62F2E;
+}
 .logo{
-    width: 150px;
-    height: 80px;
-    margin-left: 100px;
+    width: 180px;
+    height: 60px;
+    margin-left: 50px;
+    margin-right: 50px;
     display: block;
 }
 .video-banner{
     width: 100%;
-    height: 50%;
+     height: 80%;
     margin: 0%;
     padding: 0%;
 }
 footer{
-  background:#DD1B2F ;  
+  background:#e62f2e ;
   color: beige;
-   
 }
-
 .content-footer{
     background:#DD1B2F ;
 }
 #contacto{
     color: white;
-    
 }
 .logo-alicorp{
-   width: 200px;
-   height: 150px;
+   width: 90%;
+   height: 80%;
    margin-left: 70px;
+   margin-left: 30px;
 }
 .buscador{
     display:flex;
@@ -76,8 +77,165 @@ footer{
     display: flex;
     justify-content: space-around;
 }
+.img-login{
+    width: 50%;
+    height: 50%;
+
+}
 .last-footer{
     background-color: beige;
     color: black;
-    
+}
+.searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 50px;
+    background-color: #333;
+    border-radius: 30px;
+    padding: 10px;
+    }
+    .search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    }
+    .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 450px;
+    caret-color:red;
+    transition: width 0.4s linear;
+    }
+    .searchbar:hover > .search_icon{
+    background: white;
+    color: #DD1B2F;
+    }
+    .search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white;
+    }
+.btn-ingresar{
+    color: red;
+}
+.linkNext{
+    border: red;
+}
+.navbar{
+    font-family: 'Roboto', sans-serif;
+}
+.searcher{
+    width: 20px;
+    height: 20px;
+    margin-right: 200px ;
+}
+.login-block{
+    display: flex;
+    justify-content: right;
+}
+.container{
+    margin-top: 90px;
+}
+.user_card {
+    height: 500px;
+    width: 363.37px;
+    margin-top: 30px;
+    font-family: 'Roboto', sans-serif;
+    background: #E62F2E;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+}
+/* .brand_logo_container {
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    top: -75px;
+    padding: 10px;
+    text-align: center;
+} */
+.brand_logo {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.form_container {
+    margin-top: 60px;
+}
+/* .login_btn {
+    width: 200%;
+    background: #8DB73B !important;
+    color: white !important;
+    margin-top: 30px;
+} */
+.login_btn:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+.login_container {
+    padding: 0 2rem;
+}
+.input-group-text {
+    background: #FFFFFF !important;
+    color: #4F585A !important;
+    border: 0 !important;
+    border-radius: 0.25rem 0 0 0.25rem !important;
+}
+.input_user,
+.input_pass:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #C0392B !important;
+}
+.bienvenida{
+     margin-top: 0%;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    color: #FFFFFF ;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.btnMesero{
+    color:  #FFFFFF;
+}
+.login_container{
+    width: 100%;
+    height: 25%;
+    background: #8DB73B !important;
+    color: white !important;
+    margin-top: 30px;
+}
+.alicorp-logo-login{
+    width: 50%;
+    height: 50%;
+    margin-top: 150px;
+   margin-right: 50px;
+}
+.nav-menu{
+    content: "";
+    background-color: #EFF0EF;
+    width: 60px;
+    height: 100%;
+    display: block;
+    border-radius: 0 0 0 100%;
+    position: absolute;
+    top: 0;
+    left: -60px;
 }

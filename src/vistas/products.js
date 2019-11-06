@@ -9,7 +9,6 @@ export default (obj) => {
       <button type="button">Agregar</button>
      </div> 
     `;
-
     const divElement = document.createElement('section');
     // divElement.className = "body";
     divElement.innerHTML = viewProd;

@@ -8,6 +8,9 @@ export const changeTmp = (hash) => {
         case '': 
         sectionMain.appendChild(components.home());
         break;
+        case '#/login': 
+        sectionMain.appendChild(components.login());
+        break;
         case '#/mesero': 
         // readPosts((call) => {
             // sectionMain.innerHTML = '';
