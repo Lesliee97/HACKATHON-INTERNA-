@@ -10,7 +10,7 @@ export default (obj) => {
     <th scope="col">Precio Total</th>
   </tr>
 </thead>
-<tbody id="containerTabla">
+<tbody id="seleccionados">
 </tbody>
 <tfoot id="total"></tfoot>
 </table>
