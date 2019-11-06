@@ -42,29 +42,24 @@ export default () => {
   const divElem = document.createElement('div');
   divElem.innerHTML = login;
   const btnIngresar = divElem.querySelector('#btn-ingresar');
+
   btnIngresar.addEventListener('click', (event) => {
     event.preventDefault();
     const usuario = divElem.querySelector('#usuario').value;
     const password = divElem.querySelector('#password').value;
     colaborador(callback => {
-      let respuesta = "";
-      callback.forEach(doc => {
-        if (usuario === doc.id) {
-          respuesta = true;
-          // console.log("ven");
-        } else {
-          respuesta = false;
-          // console.log("no");
-        }
-        // console.log(doc)})
+      
+      const found = callback.find((p) => {
+        return p.id === usuario;
       });
-if(respuesta===true){
-  changeRoute('#/mesero');
-}else{
-  console.log("verifica tu código");
-}
-      // console.log(respuesta);
-    });
+
+      if (found !== undefined) {
+        changeRoute('#/mesero');
+        }
+        else {
+      console.log("verifica tu código");
+        }
+      });
   });
   return divElem;
 };
