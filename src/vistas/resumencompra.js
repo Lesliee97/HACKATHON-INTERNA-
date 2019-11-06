@@ -1,6 +1,9 @@
 import { btnDatos } from '../controlador-rutas/tabla.js'
 export default () => {
     const viewResumen = `
+    <div class="progress">
+  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
 <table class="table">
 <thead class="thead-light">
   <tr>

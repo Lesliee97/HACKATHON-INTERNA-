@@ -42,6 +42,7 @@ export default () => {
         <p id= "nameUsuario">Bienvenida</p>
       </div>
       </div>
+      <div id="cuadro"> <button type="button">cuadro</button></div>
     </nav>
   </header>
   <div>
@@ -82,7 +83,11 @@ export default () => {
   //   }
   // }
   })
-
+  
+  divElement.querySelector('#cuadro').addEventListener('click', () => {
+    changeRoute('#/cuadroestadistico');
+    })
+ 
   btnCarrito.addEventListener('click', () => {
   changeRoute('#/resumencompra');
   })

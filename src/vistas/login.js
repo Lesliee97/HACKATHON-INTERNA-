@@ -2,7 +2,6 @@ import { colaborador } from '../controlador-firebase/controlador-fb.js';
 import { changeRoute } from '../controlador-rutas/funciones.js';
 import { components } from '../vistas/index.js';
 
-
 export default () => {
   const login = `
   <div class="container h-100">
