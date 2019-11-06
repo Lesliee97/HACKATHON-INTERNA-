@@ -1,5 +1,5 @@
 import { verDataFb } from "../controlador-firebase/controlador-fb.js";
-import { templates } from "../controlador-rutas/funciones.js";
+// import { templates } from "../controlador-rutas/funciones.js";
 import { productos } from "../controlador-firebase/controlador-fb.js";
 import { components } from '../vistas/index.js';
 import { changeRoute } from '../controlador-rutas/funciones.js';
@@ -10,8 +10,9 @@ export default () => {
   <div class ="buscador">
   <img class="log flex1" src="../imgs/alicorp_web.jpg">
   <form class=" flex2 form-inline my-2 my-lg-0">
-          <input  id="buscador"class="form-input mr-sm-2" type="search" placeholder="¿Qué producto necesitas?">
-          <i  id="buscar"class="fa fa-search btn-search" aria-hidden="true"></i>
+          <input id="buscar" class="form-input mr-sm-2" type="search" placeholder="¿Qué producto necesitas?">
+          <i class="fa fa-search btn-search" aria-hidden="true"></i>
+
         </form>
   </div>
     <nav id="navbar-catalogo"class="navbar navbar-expand-lg  navbar-light bg-red >
@@ -66,65 +67,44 @@ export default () => {
   const box = divElement.querySelector('#containerCentral');
   const btnCarrito = divElement.querySelector('#btnCarrito');
 
-  // const filtrar = () => {
-  //   texto = dataProductos.value;
-  //   for (let producto of dataProductos) {
-  //     let Nombre = producto.Nombre;
-  //     if (Nombre.indexOf(texto) !== -1){
-  //       box.innerHTML += `
-  //     <img  class ="card"src="${obj.url}">
-  //     <p class="name-prod">${obj.producto}</p>
-  //     <p class="marca">${obj.marca}</p>
-  //     <p><span>Precio Venta </span>S/.${obj.compra}</p>
-  //     <p><span>Precio Sugerido </span>S/.${obj.precio}</p>
-  //     <div>
-  //     <button id= "resta" type="button" class="btn-add">-</button>
-  //     <span id="cant"> 1 </span>
-  //     <button id ="suma" type="button" class="btn-add">+</button>
-  //     </div>
-  //     <button  id="agregar"type="button" class="btn-add">Agregar</button>
-  //   `
-  //     };
-  //   }
-  //   if(box.innerHTML==''){
-  //     `<p>No se encontró</p>`
+  buscar.addEventListener('click', () => {
+    //show().then(response => console.log(response))
+   console.log(show());
+  //   box.innerHTML = '';
+  // const inputName = data.filter(prod => prod.producto.toLowerCase().indexOf(event.target.value.toLowerCase()) >= 0);
+  // if (event.target.value.length > 0) {
+  //   if (inputName.length !== 0) {
+  //     data.forEach(doc => {
+  //       box.appendChild(components.products(doc))
+  //     });
+  //   } else {
+  //     console.log('holi');
   //   }
   // }
-  // buscar.addEventListener('click', filtrar)
-  // dataProductos.addEventListener('keyup',filtrar)
-  // filtrar();
-
-  btnName.addEventListener('click', () => {
-    const input = document.getElementById('inputTexto').value;
-    const infoname = document.getElementById('cliente');
-    infoname.innerHTML = `Cliente: ${input}`;
   })
 
   btnCarrito.addEventListener('click', () => {
-    // modal.innerHTML=components.modal().textContent;
-    changeRoute('#/resumencompra');
+  changeRoute('#/resumencompra');
   })
-
-  // desayuno.addEventListener('click', () => {
+  
+  // let data = [];
   box.innerHTML = '';
-  // verDataFb('catálogo')
-  //   .then((snapshot) => {
-
-  //     snapshot.docs.forEach(doc => {
-  //       box.appendChild(components.products(doc.data()));
-
-  //     });
-  //   })
-  //   .catch(() => console.log('error'));
- verDataFb('catálogo').then((querySnapshot) => {
+  const show = () => {
+    verDataFb('catálogo').then((querySnapshot) => {
     const array = [];
     querySnapshot.forEach((doc) => {
       array.push({ id: doc.id, ...doc.data() });
+      
     });
+    
     array.forEach(doc => {
       box.appendChild(components.products(doc))
     });
+    
   })
+  
+} 
+show();
 
   btnConservas.addEventListener('click', () => {
     box.innerHTML = '';

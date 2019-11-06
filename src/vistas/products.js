@@ -1,4 +1,6 @@
 import { btnDatos } from '../controlador-rutas/tabla.js';
+import { components } from '../vistas/index.js';
+
 export default (obj) => {
   const viewProd = `
   <img  class ="card"src="${obj.url}">
@@ -33,29 +35,23 @@ export default (obj) => {
   });
 
   agregar.addEventListener('click', () => {
-    const datosLocal = localStorage.getItem('datos')
+    const datosLocal = localStorage.getItem('datos');
     const objeto = datosLocal == null ? { datos: [] } : JSON.parse(datosLocal)
     const metodoFind = objeto.datos.find(ele => ele.id === obj.id);
     if (!metodoFind) {
       objeto.datos.push({ id: obj.id, cant: parseInt(cantNew.textContent), ...obj })
-    } else {
+      btnDatos(obj);
+    }else{
       metodoFind.cant++
     }
-    localStorage.setItem("datos", JSON.stringify(objeto))
-    console.log(datosLocal);
-    // productos: seleccionados.map((element) => ({ producto: element.nombre, cantidad: element.cantidad, subtotal: element.total })),
-    // datosLocal.datos.forEach((element) => {
-    //   console.log(ele)
-      
-    // }) 
+    localStorage.setItem("datos", JSON.stringify(objeto));
+    // console.log(localStorage.getItem('datos'))
     
-    // datosLocal.datos.forEach((ele)=>{
-    //   console.log(ele)
+    });
+    // JSON.parse(localStorage.getItem('datos')).datos.forEach(element => {
+    //   console.log(element);
     // });
-  })
   
-
-
   return divElement;
 }
 
