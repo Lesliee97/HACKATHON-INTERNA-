@@ -17,7 +17,9 @@ export const changeTmp = (hash) => {
         sectionMain.appendChild(components.loginOperario());
             // root.appendChild(viewHome(call));
         //   });
-        
+        break;
+        case '#/resumencompra': 
+        sectionMain.appendChild(components.resumencompra());
         break;
         case '#/cocinero': 
         sectionMain.appendChild(components.catalogo());

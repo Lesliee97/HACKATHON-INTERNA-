@@ -1,13 +1,14 @@
 import { arrProducto } from "../controlador-rutas/funciones.js";
 import { guardarPedidos } from '../controlador-firebase/controlador-fb.js'
+
 let sumaTotal = 0
 export const btnDatos = (doc) => {
   const btnPintardato = document.createElement('tr');
   btnPintardato.innerHTML +=
     `<td id="productos" >${doc.producto}</td>
-          <td id="precios">s/.${doc.precio}</td>
+          <td id="producto">s/.${doc.precio}</td>
           <td><p class="colour">${doc.cantidad}</p></td> 
-          <td><button class="btnEliminar" id="${doc.id}">X</button></td>`;
+      <td><button class="btnEliminar" id="${doc.id}">X</button></td>`;
   const box1 = document.querySelector('#containerTabla');
   box1.appendChild(btnPintardato);
   
@@ -15,6 +16,8 @@ export const btnDatos = (doc) => {
   
   sumaTotal += subtotal
 
+
+  
   const btnEliminar = btnPintardato.querySelector('.btnEliminar');
   btnEliminar.addEventListener('click', (event) => {
     const even = event.target.id;
@@ -51,9 +54,6 @@ export const btnTotal = () => {
   })
 
 }
-
-
-
 const removeLocalStorage = (arrP, index) => {
    
   arrP = JSON.parse(localStorage.getItem('ordenes'));

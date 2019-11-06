@@ -288,12 +288,14 @@ footer{
     top: 0;
     left: -60px;
 }
+.user {
+    width:40px;
+    height: 30px;
+    margin-top: 10px;
+}
 @media (min-width: 800px){
     .alicorp-logo-login{
         display: block;
 
     }
 }
-
-
-    

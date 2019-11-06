@@ -2,6 +2,7 @@ import { verDataFb } from "../controlador-firebase/controlador-fb.js";
 import { templates } from "../controlador-rutas/funciones.js";
 import { productos } from "../controlador-firebase/controlador-fb.js";
 import { components } from '../vistas/index.js';
+import { changeRoute } from '../controlador-rutas/funciones.js';
 
 export default () => {
   const viewCatalogue = `
@@ -34,10 +35,14 @@ export default () => {
             <a class="nav-link text-white " tabindex="-1" aria-disabled="true">Jabones</a>
           </li>
           <li  id ="btnshopping" class="nav-item">
-            <img class="shopping-car" src="../imgs/shopping-cart.svg">
+            <img id="btnCarrito" class="shopping-car" src="../imgs/shopping-cart.svg">
           </li>
         </ul>
-        
+        <div class="infoMenuDerecha">
+        <img class="user" src="../imgs/man-user.svg" alt="Usuario Perfil"/>
+        <p id="name"></p>
+      </div>
+       
       </div>
     </nav>
   </header>
@@ -53,6 +58,7 @@ export default () => {
       <input type="text" id="inputTexto" placeholder="Nombre cliente">
       <button id="btnOk">→</button>
     </div>
+    <div id="modales"></div>
     <button id="btnAlmuerzo">mmm</button>
     <div id="containerCentral" class ="cardProd"></div>
     <h2 id="cliente">Cliente : </h2>
@@ -70,27 +76,31 @@ export default () => {
   const btnPastas = divElement.querySelector('#btnPastas');
   const btnDetergentes = divElement.querySelector('#btnDetergentes');
   const btnJabones = divElement.querySelector('#btnJabones');
-
   const box = divElement.querySelector('#containerCentral');
+  const btnCarrito = divElement.querySelector('#btnCarrito');
+
   btnName.addEventListener('click', () => {
     const input = document.getElementById('inputTexto').value;
     const infoname = document.getElementById('cliente');
     infoname.innerHTML = `Cliente: ${input}`;
-
   })
 
+  btnCarrito.addEventListener('click', () => {
+  // modal.innerHTML=components.modal().textContent;
+  changeRoute('#/resumencompra');
+  })
 
   // desayuno.addEventListener('click', () => {
-    box.innerHTML = '';
-    // verDataFb('catálogo')
-    //   .then((snapshot) => {
+  box.innerHTML = '';
+  // verDataFb('catálogo')
+  //   .then((snapshot) => {
 
-    //     snapshot.docs.forEach(doc => {
-    //       box.appendChild(components.products(doc.data()));
-     
-    //     });
-    //   })
-    //   .catch(() => console.log('error'));
+  //     snapshot.docs.forEach(doc => {
+  //       box.appendChild(components.products(doc.data()));
+
+  //     });
+  //   })
+  //   .catch(() => console.log('error'));
   // })
   verDataFb('catálogo').then((querySnapshot) => {
     const array = [];
@@ -98,7 +108,7 @@ export default () => {
       array.push({ id: doc.id, ...doc.data() });
     });
     array.forEach(doc => {
-    box.appendChild(components.products(doc))
+      box.appendChild(components.products(doc))
     });
   })
 
