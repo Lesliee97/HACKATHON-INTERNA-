@@ -1,5 +1,7 @@
 import { colaborador } from '../controlador-firebase/controlador-fb.js';
 import { changeRoute } from '../controlador-rutas/funciones.js';
+import { components } from '../vistas/index.js';
+
 
 export default () => {
   const login = `
@@ -19,7 +21,7 @@ export default () => {
             <div class="input-group-append">
               <span class="input-group-text"><i class="fa fa-user"></i></span>
             </div>
-            <input  id="usuario"type="text" name="" class="form-control input_user" value="" placeholder="Usuario">
+            <input id="usuario" type="text" name="" class="form-control input_user" value="" placeholder="Usuario">
           </div>
           <div class="input-group mb-2">
             <div class="input-group-append">
@@ -44,9 +46,10 @@ export default () => {
   const btnIngresar = divElem.querySelector('#btn-ingresar');
 
   btnIngresar.addEventListener('click', (event) => {
+
     event.preventDefault();
     const usuario = divElem.querySelector('#usuario').value;
-    const password = divElem.querySelector('#password').value;
+    // const password = divElem.querySelector('#password').value;
     colaborador(callback => {
       
       const found = callback.find((p) => {
@@ -55,9 +58,11 @@ export default () => {
 
       if (found !== undefined) {
         changeRoute('#/mesero');
+        // components.loginOperario(callback);
+        // console.log(callback);
         }
         else {
-      console.log("verifica tu código");
+        console.log("verifica tu código");
         }
       });
   });
