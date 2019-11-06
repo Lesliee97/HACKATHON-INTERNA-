@@ -5,7 +5,7 @@ import Home from './home.js';
 import Different from './notFound.js';
 import Products from './products.js';
 import resumencompra from '../vistas/resumencompra.js';
-
+import Usuario from '../vistas/usuario.js';
 const components = {
     catalogo: catalogo,
     login:login,
@@ -13,7 +13,8 @@ const components = {
     loginOperario: loginOperario,
     home: Home,
     different: Different,
-    products: Products
+    products: Products,
+    usuario:Usuario,
 }
 
 export {
