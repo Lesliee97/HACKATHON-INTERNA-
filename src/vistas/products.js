@@ -6,12 +6,16 @@ export default (obj) => {
       <p>${obj.marca}</p>
       <p><span>Precio Venta </span>${obj.compra}</p>
       <p><span>Precio Sugerido </span>${obj.precio}</p>
+      <div>
+      <button type="button">+</button>
+      <span> </span>
+      <button type="button">-</button>
+      </div>
       <button type="button">Agregar</button>
      </div> 
     `;
     const divElement = document.createElement('section');
     // divElement.className = "body";
     divElement.innerHTML = viewProd;
-
     return divElement;
 }
