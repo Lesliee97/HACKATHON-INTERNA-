@@ -18,8 +18,10 @@ export default () => {
 <tbody id="containerTabla">
 </tbody>
 </table>
-<p id="total">${Total()}</p>
+<p id="total"><strong>Total : ${Total()}</strong></p>
+<div class="total-compra">
 <button id="btn-comprar" type="button" >Comprar</button>
+</div>
     `;
     const divElement = document.createElement('section');
     // divElement.className = "resumen";
@@ -37,7 +39,7 @@ export default () => {
       
         contenedor.innerHTML = '';
         total.textContent ='';
-        localStorage.clear();
+        localStorage.removeItem('datos');
 
 
     })

@@ -47,13 +47,11 @@ export default () => {
     <p id="name">${currentUser().email}</p>
   </div>
   </div>
-  <div id="cuadro"> <button type="button">cuadro</button></div>
+  <div id="cuadro"> <p type="button"></p></div>
 </nav>
-
   </header>
-  
     <div>
-      <button id="btnOk">→</button>
+      <p id="btnOk">→</p>
     </div>
     <div id="containerCentral" class ="cardProd"></div>
     <div>
@@ -89,9 +87,9 @@ export default () => {
   // }
   })
   
-  divElement.querySelector('#cuadro').addEventListener('click', () => {
-    changeRoute('#/cuadroestadistico');
-    })
+  // divElement.querySelector('#cuadro').addEventListener('click', () => {
+  //   changeRoute('#/cuadroestadistico');
+  //   })
  
   btnCarrito.addEventListener('click', () => {
   changeRoute('#/resumencompra');

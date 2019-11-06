@@ -1,6 +1,6 @@
 
 import { guardarPedidos } from '../controlador-firebase/controlador-fb.js'
-const arrProducto = JSON.parse(localStorage.getItem('datos')).datos;
+// const arrProducto = JSON.parse(localStorage.getItem('datos'));
 // let sumaTotal = 0
 export const btnDatos = (doc) => {
   const btnPintardato = document.createElement('tr');
@@ -23,10 +23,10 @@ export const btnDatos = (doc) => {
   btnEliminar.addEventListener('click', () => {
     // const even = event.target.id;
 
-    const newArray = arrProducto.filter((ele) => {
-    return doc.id !== ele.id;
-    });
-    console.log(newArray);
+    // const newArray = arrProducto.filter((ele) => {
+    // return doc.id !== ele.id;
+    // });
+    // console.log(newArray);
     // contenedor.removeChild(btnPintardato);
     // removeLocalStorage(arrProducto, even);
     // btnTotal(sumaTotal -= subtotal);

@@ -405,11 +405,7 @@ footer {
     left: -60px;
 }
 
-.user {
-    width: 40px;
-    height: 30px;
-    margin-top: 10px;
-}
+
 
 @media (min-width: 800px) {
     .alicorp-logo-login {
@@ -431,4 +427,32 @@ footer {
 #footer-content{
     margin-top: 40px;
     padding: 30px;
+}
+.infoMenuDerecha{
+    display: flex;
+    justify-content: space-between;
+}
+.user {
+    width: 40px;
+    height: 30px;
+    
+}
+#name{
+    color: #FFFFFF;
+}
+#btn-comprar{
+    color: #FFFFFF;
+    background: #e62f2e;
+    border: #e62f2e;
+    border-radius:  5px;
+    margin-top:30px;
+    width: 80px;
+    height: 40px;
+}
+.total-compra{
+    display: flex;
+    justify-content: center;
+}
+#total{
+   margin-left: 30px;
 }
