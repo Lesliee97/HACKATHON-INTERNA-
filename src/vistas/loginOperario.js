@@ -1,6 +1,6 @@
 import { verDataFb } from "../controlador-firebase/controlador-fb.js";
 // import { templates } from "../controlador-rutas/funciones.js";
-import { productos } from "../controlador-firebase/controlador-fb.js";
+import { productos, currentUser } from "../controlador-firebase/controlador-fb.js";
 import { components } from '../vistas/index.js';
 import { changeRoute } from '../controlador-rutas/funciones.js';
 
@@ -39,7 +39,7 @@ export default () => {
         </ul>
         <div class="">
         <img class="user" src="../imgs/man-user.svg" alt="Usuario Perfil"/>
-        <p id="name"></p>
+        <p id="name">${currentUser().email}</p>
       </div>
        
       </div>
