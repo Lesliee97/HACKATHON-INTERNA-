@@ -1,20 +1,17 @@
+export const loginEmail = (email, password) => firebase.auth().signInWithEmailAndPassword(email, password);
+export const currentUser = () => firebase.auth().currentUser;
 export const verDataFb = (string) => {
    return firebase.firestore().collection(string).get();
 };
 
-export const guardarPedidos = (arrObj) => {
-   return firebase.firestore().collection('Pedidos').add(arrObj);
-}
+export const guardarPedidos = (email, pedido, total, date) =>  firebase.firestore().collection('pedido').add({
+   email: email,
+   pedido: pedido,
+   total: total,
+   date: date,
+ });
 
-// export const readPosts = (callback) => {
-//    firebase.firestore().collection('catálogo').onSnapshot((datos) => {
-//      const array = [];
-//      datos.forEach((doc) => {
-//        array.push({ id: doc.id, ...doc.data() });
-//      });
-//      callback(array);
-//    });
-// };
+
 export const productos = (tipo, call) => {
    firebase.firestore().collection("catálogo").where("categoria", "==", tipo)
       // .get()

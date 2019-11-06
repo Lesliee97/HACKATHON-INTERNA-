@@ -1,9 +1,9 @@
-import { btnDatos } from '../controlador-rutas/tabla.js'
+import { btnDatos, Total } from '../controlador-rutas/tabla.js';
+import { guardarPedidos } from '../controlador-firebase/controlador-fb.js';
+import { currentUser } from "../controlador-firebase/controlador-fb.js";
+
 export default () => {
     const viewResumen = `
-    <div class="progress">
-  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
 <table class="table">
 <thead class="thead-light">
   <tr>
@@ -17,16 +17,30 @@ export default () => {
 </thead>
 <tbody id="containerTabla">
 </tbody>
-<tfoot id="total"></tfoot>
 </table>
+<p id="total">${Total()}</p>
+<button id="btn-comprar" type="button" >Comprar</button>
     `;
     const divElement = document.createElement('section');
     // divElement.className = "resumen";
     divElement.innerHTML = viewResumen;
+    const total = divElement.querySelector('#total');
     const contenedor = divElement.querySelector('#containerTabla');
+    const comprar = divElement.querySelector('#btn-comprar');
     // contenedor='';
     JSON.parse(localStorage.getItem('datos')).datos.forEach(element => {
       contenedor.appendChild(btnDatos(element));
     });
+    
+    comprar.addEventListener('click', () => {
+      guardarPedidos(currentUser().email, JSON.parse(localStorage.getItem('datos')).datos, Total(), new Date())
+      
+        contenedor.innerHTML = '';
+        total.textContent ='';
+        localStorage.clear();
+
+
+    })
+    
     return divElement;
 }
