@@ -5,7 +5,7 @@ import { components } from '../vistas/index.js';
 
 export default () => {
   const login = `
-  <div class="container h-100">
+  <div class="container2 h-100">
   <div class="d-flex justify-content-around mb-2">
    <img class="alicorp-logo-login"src="../imgs/Copy-of-logo_Alta.jpg">
     <div class="user_card">
