@@ -1,5 +1,5 @@
 import { verDataFb } from "../controlador-firebase/controlador-fb.js";
-import { templates } from "../controlador-rutas/funciones.js";
+// import { templates } from "../controlador-rutas/funciones.js";
 import { productos } from "../controlador-firebase/controlador-fb.js";
 import { components } from '../vistas/index.js';
 import { changeRoute } from '../controlador-rutas/funciones.js';
@@ -10,8 +10,7 @@ export default () => {
   <div class ="buscador">
   <img class="log flex1" src="../imgs/alicorp_web.jpg">
   <form class=" flex2 form-inline my-2 my-lg-0">
-          <input class="form-input mr-sm-2" type="search" placeholder="¿Qué producto necesitas?">
-          <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>-->
+          <input id="buscar" class="form-input mr-sm-2" type="search" placeholder="¿Qué producto necesitas?">
           <i class="fa fa-search btn-search" aria-hidden="true"></i>
 
         </form>
@@ -38,7 +37,7 @@ export default () => {
             <img id="btnCarrito" class="shopping-car" src="../imgs/shopping-cart.svg">
           </li>
         </ul>
-        <div class="infoMenuDerecha">
+        <div class="">
         <img class="user" src="../imgs/man-user.svg" alt="Usuario Perfil"/>
         <p id="name"></p>
       </div>
@@ -55,13 +54,10 @@ export default () => {
 
 </div>
     <div>
-      <input type="text" id="inputTexto" placeholder="Nombre cliente">
-      <button id="btnOk">→</button>
-    </div>
-    <div id="modales"></div>
-    <button id="btnAlmuerzo">mmm</button>
     <div id="containerCentral" class ="cardProd"></div>
-    <h2 id="cliente">Cliente : </h2>
+    <div id="carrito-compras"></div>
+   </div>
+    
     <div>
    `;
 
@@ -78,39 +74,46 @@ export default () => {
   const btnJabones = divElement.querySelector('#btnJabones');
   const box = divElement.querySelector('#containerCentral');
   const btnCarrito = divElement.querySelector('#btnCarrito');
+  const buscar = divElement.querySelector('#buscar');
 
-  btnName.addEventListener('click', () => {
-    const input = document.getElementById('inputTexto').value;
-    const infoname = document.getElementById('cliente');
-    infoname.innerHTML = `Cliente: ${input}`;
+  buscar.addEventListener('click', () => {
+    //show().then(response => console.log(response))
+   console.log(show());
+  //   box.innerHTML = '';
+  // const inputName = data.filter(prod => prod.producto.toLowerCase().indexOf(event.target.value.toLowerCase()) >= 0);
+  // if (event.target.value.length > 0) {
+  //   if (inputName.length !== 0) {
+  //     data.forEach(doc => {
+  //       box.appendChild(components.products(doc))
+  //     });
+  //   } else {
+  //     console.log('holi');
+  //   }
+  // }
   })
 
   btnCarrito.addEventListener('click', () => {
-  // modal.innerHTML=components.modal().textContent;
   changeRoute('#/resumencompra');
   })
-
-  // desayuno.addEventListener('click', () => {
+  
+  // let data = [];
   box.innerHTML = '';
-  // verDataFb('catálogo')
-  //   .then((snapshot) => {
-
-  //     snapshot.docs.forEach(doc => {
-  //       box.appendChild(components.products(doc.data()));
-
-  //     });
-  //   })
-  //   .catch(() => console.log('error'));
-  // })
-  verDataFb('catálogo').then((querySnapshot) => {
+  const show = () => {
+    verDataFb('catálogo').then((querySnapshot) => {
     const array = [];
     querySnapshot.forEach((doc) => {
       array.push({ id: doc.id, ...doc.data() });
+      
     });
+    
     array.forEach(doc => {
       box.appendChild(components.products(doc))
     });
+    
   })
+  
+} 
+show();
 
   btnConservas.addEventListener('click', () => {
     box.innerHTML = '';
