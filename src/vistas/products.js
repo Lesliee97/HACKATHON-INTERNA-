@@ -34,7 +34,6 @@ export default (obj) => {
     }
   });
 
-
   agregar.addEventListener('click', () => {
     const datosLocal = localStorage.getItem('datos');
     const objeto = datosLocal == null ? { datos: [] } : JSON.parse(datosLocal)
@@ -55,3 +54,4 @@ export default (obj) => {
   
   return divElement;
 }
+

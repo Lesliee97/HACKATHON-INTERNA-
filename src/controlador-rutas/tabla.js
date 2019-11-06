@@ -40,6 +40,7 @@ export const Total = () => {
   return acum;
 };
 
+//   sumaTotal += subtotal
 
 // export const btnTotal = () => {
 

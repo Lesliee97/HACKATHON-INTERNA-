@@ -176,4 +176,4 @@ export const templates = (doc) => {
 
 
 
-export const arrProducto = JSON.parse(localStorage.getItem('ordenes', JSON.stringify(arr)));
+// export const arrProducto = JSON.parse(localStorage.getItem('ordenes', JSON.stringify(arr)));

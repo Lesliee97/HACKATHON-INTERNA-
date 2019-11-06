@@ -41,32 +41,24 @@ export default () => {
         <img class="user" src="../imgs/man-user.svg" alt="Usuario Perfil"/>
         <p id="name">${currentUser().email}</p>
       </div>
-       
       </div>
     </nav>
   </header>
   <div>
-
-  <div class="progress">
-  <div id="bar" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
-    <span class="sr-only">0% Complete</span>
-  </div>
-
 </div>
     <div>
+      <button id="btnOk">→</button>
+    </div>
     <div id="containerCentral" class ="cardProd"></div>
-    <div id="carrito-compras"></div>
-   </div>
-    
     <div>
    `;
-
-
   const divElement = document.createElement('section');
   divElement.className = "body";
   divElement.innerHTML = viewCatalogue;
   const btnName = divElement.querySelector('#btnOk');
   /* CATEGORIAS DE PRODUCTOS */
+  const buscador = divElement.querySelector('#buscador');
+  const buscar = divElement.querySelector('#buscar');
   const btnConservas = divElement.querySelector('#btnConservas');
   const btnAceites = divElement.querySelector('#btnAceites');
   const btnPastas = divElement.querySelector('#btnPastas');
@@ -74,7 +66,6 @@ export default () => {
   const btnJabones = divElement.querySelector('#btnJabones');
   const box = divElement.querySelector('#containerCentral');
   const btnCarrito = divElement.querySelector('#btnCarrito');
-  const buscar = divElement.querySelector('#buscar');
 
   buscar.addEventListener('click', () => {
     //show().then(response => console.log(response))
@@ -156,7 +147,5 @@ show();
       });
     })
   });
-
-
   return divElement;
 };
