@@ -5,7 +5,6 @@ export default (obj) => {
             
      </div> 
     `;
-
     const divElement = document.createElement('section');
     // divElement.className = "body";
     divElement.innerHTML = viewProd;
