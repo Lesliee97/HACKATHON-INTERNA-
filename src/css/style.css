@@ -227,6 +227,7 @@ footer{
     height: 50%;
     margin-top: 150px;
    margin-right: 50px;
+   display: none;
 }
 .nav-menu{
     content: "";
@@ -239,3 +240,12 @@ footer{
     top: 0;
     left: -60px;
 }
+@media (min-width: 800px){
+    .alicorp-logo-login{
+        display: block;
+
+    }
+}
+
+
+    
