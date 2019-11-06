@@ -153,7 +153,7 @@ export const templates = (doc) => {
         }
             localStorage.setItem('ordenes', JSON.stringify(arr));
     });
-    return btnBoton;
+    
 };
 
 

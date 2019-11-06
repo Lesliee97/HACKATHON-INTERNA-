@@ -1,7 +1,7 @@
 export default () => {
     const viewHome = `
     <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white font-weight-bold">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white ">
     <div class="linkNext">
     <a href="#/login" class="btn-ingresar"><span class="spanMesero">SI ERES OPERARIO INGRESA AQUI</span></a>
     <a href="#" class="btnCocinero"><span class="spanCocinero"></span></a>
@@ -13,7 +13,7 @@ export default () => {
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <li class="nav-item active ">
           <a class="nav-link" href="#">Nosotros <span class="sr-only">(current)</span></a>
         </li> 
         <li class="nav-item dropdown">

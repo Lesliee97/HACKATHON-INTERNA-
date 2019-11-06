@@ -6,6 +6,16 @@
 .body-home{
 background-color: #E62F2E;
 }
+#navbar-catalogo{
+    background-color: #E62F2E;
+    
+}
+.shopping-car{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: 5px;
+}
 .logo{
     width: 180px;
     height: 60px;
@@ -265,6 +275,7 @@ footer{
     height: 50%;
     margin-top: 150px;
    margin-right: 50px;
+   display: none;
 }
 .nav-menu{
     content: "";
@@ -278,6 +289,13 @@ footer{
     left: -60px;
 }
 .user {
-    width: 5%;
-    height: 6%;
+    width:40px;
+    height: 30px;
+    margin-top: 10px;
+}
+@media (min-width: 800px){
+    .alicorp-logo-login{
+        display: block;
+
+    }
 }
