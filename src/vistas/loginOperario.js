@@ -7,14 +7,16 @@ export default () => {
   const viewCatalogue = `
   <header>
   <div class ="buscador">
-  <img class="log" src="../imgs/alicorp_web.jpg">
-  <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="producto ...">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+  <img class="log flex1" src="../imgs/alicorp_web.jpg">
+  <form class=" flex2 form-inline my-2 my-lg-0">
+          <input class="form-input mr-sm-2" type="search" placeholder="¿Qué producto necesitas?">
+          <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>-->
+          <i class="fa fa-search btn-search" aria-hidden="true"></i>
+
         </form>
   </div>
     <nav class="navbar navbar-expand-lg navbar-light btn-danger">
-      <a class="navbar-brand" href="#">Catálogo</a>
+      <!--<a class="navbar-brand" href="#">Catálogo</a>-->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
         aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -25,17 +27,17 @@ export default () => {
           <li id="btnConservas" class="nav-item active">
             <a class="nav-link ">Conservas<span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Aceites</a>
+          <li id="btnAceites" class="nav-item">
+            <a class="nav-link" >Aceites</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pastas</a>
+          <li id="btnPastas" class="nav-item">
+            <a class="nav-link">Pastas</a>
           </li>
-          <li  id ="detergentes" class="nav-item">
+          <li  id ="btnDetergentes" class="nav-item">
             <a class="nav-link" >Detergentes</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Jabones</a>
+          <li id="btnJabones" class="nav-item">
+            <a class="nav-link disabled" tabindex="-1" aria-disabled="true">Jabones</a>
           </li>
         </ul>
         
@@ -58,8 +60,13 @@ export default () => {
   divElement.className = "body";
   divElement.innerHTML = viewCatalogue;
   const btnName = divElement.querySelector('#btnOk');
-  const desayuno = divElement.querySelector('#btnConservas');
-  const btnDetergentes = divElement.querySelector('#detergentes');
+  /* CATEGORIAS DE PRODUCTOS */
+  const btnConservas = divElement.querySelector('#btnConservas');
+  const btnAceites = divElement.querySelector('#btnAceites');
+  const btnPastas = divElement.querySelector('#btnPastas');
+  const btnDetergentes = divElement.querySelector('#btnDetergentes');
+  const btnJabones = divElement.querySelector('#btnJabones');
+
   const box = divElement.querySelector('#containerCentral');
   btnName.addEventListener('click', () => {
     const input = document.getElementById('inputTexto').value;
@@ -69,21 +76,64 @@ export default () => {
   })
 
 
-  desayuno.addEventListener('click', () => {
+  // desayuno.addEventListener('click', () => {
     box.innerHTML = '';
-    verDataFb('catálogo')
-      .then((snapshot) => {
-        snapshot.docs.forEach(doc => {
-          box.appendChild(templates(doc));
-        });
-      })
-      .catch(() => console.log('error'));
+    // verDataFb('catálogo')
+    //   .then((snapshot) => {
+
+    //     snapshot.docs.forEach(doc => {
+    //       box.appendChild(components.products(doc.data()));
+     
+    //     });
+    //   })
+    //   .catch(() => console.log('error'));
+  // })
+  verDataFb('catálogo').then((querySnapshot) => {
+    const array = [];
+    querySnapshot.forEach((doc) => {
+      array.push({ id: doc.id, ...doc.data() });
+    });
+    array.forEach(doc => {
+    box.appendChild(components.products(doc))
+    });
   })
 
+  btnConservas.addEventListener('click', () => {
+    box.innerHTML = '';
+    productos("conservas", (call) => {
+      call.forEach(doc => {
+        box.appendChild(components.products(doc));
+      });
+    })
+  });
 
   btnDetergentes.addEventListener('click', () => {
     box.innerHTML = '';
     productos("detergentes", (call) => {
+      call.forEach(doc => {
+        box.appendChild(components.products(doc));
+      });
+    })
+  });
+  btnAceites.addEventListener('click', () => {
+    box.innerHTML = '';
+    productos("aceites", (call) => {
+      call.forEach(doc => {
+        box.appendChild(components.products(doc));
+      });
+    })
+  });
+  btnPastas.addEventListener('click', () => {
+    box.innerHTML = '';
+    productos("Pasta", (call) => {
+      call.forEach(doc => {
+        box.appendChild(components.products(doc));
+      });
+    })
+  });
+  btnJabones.addEventListener('click', () => {
+    box.innerHTML = '';
+    productos("jabon", (call) => {
       call.forEach(doc => {
         box.appendChild(components.products(doc));
       });
