@@ -2,6 +2,7 @@
 //   btnDatos,
 //   btnTotal
 // } from "../controlador-rutas/tabla.js";
+import { loginEmail } from '../controlador-firebase/controlador-fb.js';
 
 // import { colaborador } from '../controlador-firebase/controlador-fb.js';
 let arr = [];
@@ -13,7 +14,19 @@ let obj = {
 export const changeRoute = (route) => {
   window.location.hash = route;
 }
-
+export const controlLogin = (e) => {
+  e.preventDefault();
+  const usuario = document.getElementById('usuario').value;
+  const password = document.getElementById('password').value;
+  loginEmail(usuario, password)
+    .then(result => {
+      console.log(result);
+      changeRoute('#/mesero');
+    })
+    .catch(error => {
+      console.log(error);
+    })
+}
 // export const rutaCatalogo = () => {
 //   window.event.preventDefault();
 //   const usuario = document.getElementById('usuario').value;
@@ -33,7 +46,7 @@ export const changeRoute = (route) => {
 //     else {
 //       console.log("verifica tu código");
 //     }
-    
+
 //   });
 
 // }
@@ -162,5 +175,6 @@ export const templates = (doc) => {
 };
 
 
+    export const arrProducto= localStorage.getItem('datos');
 
 // export const arrProducto = JSON.parse(localStorage.getItem('ordenes', JSON.stringify(arr)));

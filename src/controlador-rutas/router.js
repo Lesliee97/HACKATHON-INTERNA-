@@ -25,7 +25,8 @@ export const changeTmp = (hash) => {
         sectionMain.appendChild(components.catalogo());
         break;
         default:
-        sectionMain.appendChild(components.different());
+        sectionMain.appendChild(components.cuadroestadistico());
+        case '#/cuadroestadistico': 
         break;
     }
 };

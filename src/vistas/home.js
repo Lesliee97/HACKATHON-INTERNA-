@@ -3,7 +3,7 @@ export default () => {
     <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-white ">
     <div class="linkNext">
-    <a href="#/login" class="btn-ingresar"><span class="spanMesero">SI ERES OPERARIO INGRESA AQUI</span></a>
+    <a href="#/login" "><span class="btn-ingresar">SI ERES OPERARIO INGRESA AQUI</span></a>
     <a href="#" class="btnCocinero"><span class="spanCocinero"></span></a>
     </div>       
     <img class="logo" src="../imgs/Copy-of-logo_Alta.jpg">
@@ -54,7 +54,7 @@ export default () => {
     
   </nav>
   </header>
-  <body ">
+  <body >
   
   <video class="video-banner" src="../video/httpswww.alicorp.com.pemediaMP4alicorp_manifesto_ONLINE_RE_e.mp4" autoplay muted loop  ></video>
 
@@ -67,9 +67,9 @@ export default () => {
                 <img class="logo-alicorp" src="../imgs/alicorp.png">
               </div>
         </div>
-        <div class="col-md-9 col-sm-12 ">
+        <div id = "footer-content" class="col-md-9 col-sm-12 ">
   
-          <div class="col-md-3 col-sm-6 col-6 p-0 float-left mb-3 text-white">
+          <div  class="col-md-3 col-sm-6 col-6 p-0 float-left mb-3 text-white">
             <h5 class="mb-4 font-weight-bold text-uppercase ">Acerca de Alicorp</h5>
           <ul class="list-group">
             <li class="list-group-item bg-transparent border-0 p-0 mb-2 text-white">Nosotro</li>
@@ -117,7 +117,8 @@ export default () => {
             </li>
           </ul>
           </div>
-  
+          </div>
+          </div>
         </div>
            <div id = "last-footer" class="col-lg-12 ">
             <div class="py-2 d-flex justify-content-center align-items-center ">
@@ -139,8 +140,8 @@ export default () => {
                 </a>
               </div>
           </div> 
-      </div>
-    </div>
+     
+   
   
   
   </footer> 

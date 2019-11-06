@@ -1,11 +1,11 @@
-import { colaborador } from '../controlador-firebase/controlador-fb.js';
+import { controlLogin } from '../controlador-rutas/funciones.js'
+import { loginEmail } from '../controlador-firebase/controlador-fb.js';
 import { changeRoute } from '../controlador-rutas/funciones.js';
 import { components } from '../vistas/index.js';
 
-
 export default () => {
   const login = `
-  <div class="container h-100">
+  <div class="container2 h-100">
   <div class="d-flex justify-content-around mb-2">
    <img class="alicorp-logo-login"src="../imgs/Copy-of-logo_Alta.jpg">
     <div class="user_card">
@@ -45,26 +45,27 @@ export default () => {
   divElem.innerHTML = login;
   const btnIngresar = divElem.querySelector('#btn-ingresar');
 
-  btnIngresar.addEventListener('click', (event) => {
+  btnIngresar.addEventListener('click', controlLogin);
 
-    event.preventDefault();
-    const usuario = divElem.querySelector('#usuario').value;
+    // event.preventDefault();
+    // const usuario = divElem.querySelector('#usuario').value;
     // const password = divElem.querySelector('#password').value;
-    colaborador(callback => {
+    // colaborador(callback => {
       
-      const found = callback.find((p) => {
-        return p.id === usuario;
-      });
+    //   const found = callback.find((p) => {
+    //     return p.id === usuario;
+    //   });
 
-      if (found !== undefined) {
-        changeRoute('#/mesero');
-        // components.loginOperario(callback);
-        // console.log(callback);
-        }
-        else {
-        console.log("verifica tu código");
-        }
-      });
-  });
+    //   if (found !== undefined) {
+    //     changeRoute('#/mesero');
+    //     // components.loginOperario(callback);
+    //     // console.log(callback);
+    //     }
+    //     else {
+    //     console.log("verifica tu código");
+    //     }
+    //   });
+    
+  // });
   return divElem;
 };
